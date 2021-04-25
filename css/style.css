@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  --bg-color: #fff;
+  --font-color: #353b48;
+}
+
+.dark_theme {
+  --bg-color: #353b48;
+  --font-color: #fff;
+}
+.mycontainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+nav .logo {
+  margin-left: 3em;
+}
+nav .logo {
+  text-decoration: none;
+  font-size: 2em;
+  color: var(--font-color) !important;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  margin-right: 3em;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--font-color) !important;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+nav .toggle_theme img {
+  width: 25px;
+  margin-right: 3em;
+  cursor: pointer;
+}
+.hero {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px;
+}
+.hero .left {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  padding: 50px;
+}
+.hero .left h1 {
+  font-size: 4em;
+  margin: 30px 0;
+  color: var(--font-color);
+}
+.hero .left h1 span {
+  color: #0984e3;
+}
+.hero .left p {
+  margin: 30px 0;
+  color: var(--font-color);
+}
+.hero .left .btn {
+  text-decoration: none;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  padding: 8px 20px;
+  font-size: 0.8em;
+}
+.hero .left .icon {
+  position: absolute;
+  bottom: -60px;
+}
+.hero .left .icon a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+
+.hero .right {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  /* background: #000; */
+  align-items: center;
+}
+.hero .right img {
+  width: 300px;
+  height: 400px;
+  background: #0984e3;
+  border-radius: 62% 39% 58% 12% / 46% 27% 55% 38%;
+}
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero .left {
+    width: 100%;
+    order: 2;
+    padding: 0;
+  }
+  .hero .left h1 {
+    font-size: 2em;
+  }
+  .hero .right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+    order: 1;
+  }
+
+  .hero .left .icon {
+    bottom: -60px;
+  }
+  nav .logo {
+    margin-left: 0;
+  }
+}
